@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Facility Hiring Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            color: #343a40;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            input, select, textarea {
+                font-size: 14px;
+            }
+            button {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Healthcare Facility Hiring Survey</h1>
+<form action="https://formspree.io/f/xgvewywq" method="POST">
+    <h2>Section 1: Facility Information</h2>
+    <label for="facilityType">1. Type of Facility:</label>
+    <select id="facilityType" name="facilityType" required>
+        <option value="">Select...</option>
+        <option>Private</option>
+        <option>Public</option>
+        <option>Non-profit</option>
+        <option>Other (please specify)</option>
+    </select>
+    <input type="text" name="otherFacilityType" placeholder="Please specify..." aria-label="Other facility type">
+
+    <label for="city">2. Location of Facility - City:</label>
+    <input type="text" id="city" name="city" placeholder="City" required aria-label="City">
+
+    <label for="region">Region:</label>
+    <input type="text" id="region" name="region" placeholder="Region" required aria-label="Region">
+
+    <label for="size">3. Size of Facility (Number of Employees):</label>
+    <select id="size" name="size" required>
+        <option value="">Select...</option>
+        <option>Fewer than 50</option>
+        <option>50-100</option>
+        <option>100-500</option>
+        <option>More than 500</option>
+    </select>
+
+    <label for="entryLevelPositions">4. Number of Entry-Level Positions Currently Employed:</label>
+    <select id="entryLevelPositions" name="entryLevelPositions" required>
+        <option value="">Select...</option>
+        <option>0-10</option>
+        <option>11-20</option>
+        <option>21-50</option>
+        <option>More than 50</option>
+    </select>
+
+    <h2>Section 2: Hiring Needs for Entry-Level Jobs</h2>
+    <label>5. Entry-level healthcare positions you are hiring (select all that apply):</label>
+    <input type="checkbox" name="positions[]" value="Phlebotomist"> Phlebotomist<br>
+    <input type="checkbox" name="positions[]" value="Home Care Aide"> Home Care Aide<br>
+    <input type="checkbox" name="positions[]" value="Emergency Medical Technician (EMT)"> Emergency Medical Technician (EMT)<br>
+    <input type="checkbox" name="positions[]" value="Dental Assistant"> Dental Assistant<br>
+    <input type="checkbox" name="positions[]" value="Patient Care Technician"> Patient Care Technician<br>
+    <input type="checkbox" name="positions[]" value="Contact Tracer"> Contact Tracer<br>
+    <input type="checkbox" name="positions[]" value="Medical Secretary"> Medical Secretary<br>
+    <input type="checkbox" name="positions[]" value="Medical Administrative Assistant"> Medical Administrative Assistant<br>
+    <input type="checkbox" name="positions[]" value="Medical Receptionist"> Medical Receptionist<br>
+    <input type="checkbox" name="positions[]" value="Patient Service Representative"> Patient Service Representative<br>
+    <input type="checkbox" name="positions[]" value="Health Information Assistant"> Health Information Assistant<br>
+    <input type="checkbox" name="positions[]" value="Medical Records Assistant"> Medical Records Assistant<br>
+    <input type="checkbox" name="positions[]" value="Housekeeping"> Housekeeping<br>
+    <input type="checkbox" name="positions[]" value="Maintenance Worker"> Maintenance Worker<br>
+    <input type="checkbox" name="positions[]" value="Dietary Aides"> Dietary Aides<br>
+    <input type="checkbox" name="positions[]" value="Other"> Other (please specify):<br>
+    <input type="text" name="otherPositions" placeholder="Please specify..." aria-label="Other positions">
+
+    <label>6. Factors determining hiring:</label>
+    <input type="checkbox" name="factors[]" value="Relevant experience"> Relevant experience<br>
+    <input type="checkbox" name="factors[]" value="Certifications/Qualifications"> Certifications/Qualifications<br>
+    <input type="checkbox" name="factors[]" value="Soft skills"> Soft skills<br>
+    <input type="checkbox" name="factors[]" value="Availability and flexibility"> Availability and flexibility<br>
+    <input type="checkbox" name="factors[]" value="Ability to learn on the job"> Ability to learn on the job<br>
+    <input type="checkbox" name="factors[]" value="Education level"> Education level<br>
+    <input type="checkbox" name="factors[]" value="Other"> Other (please specify):<br>
+    <input type="text" name="otherFactors" placeholder="Please specify..." aria-label="Other factors">
+
+    <label for="plannedHiring">7. Planned hiring for entry-level jobs (next 12 months):</label>
+    <select id="plannedHiring" name="plannedHiring" required>
+        <option value="">Select...</option>
+        <option>0-5</option>
+        <option>6-10</option>
+        <option>11-20</option>
+        <option>More than 20</option>
+    </select>
+
+    <h2>Section 3: Qualifications and Skills</h2>
+    <label>8. Minimum qualifications required:</label>
+    <select name="minimumQualifications" required>
+        <option value="">Select...</option>
+        <option>High school diploma</option>
+        <option>Short-term certificate (4-12 weeks)</option>
+        <option>Technical/vocational training</option>
+        <option>Associate's degree</option>
+        <option>Bachelor's degree</option>
+        <option>Other (please specify)</option>
+    </select>
+    <input type="text" name="otherQualifications" placeholder="Please specify..." aria-label="Other qualifications">
+
+    <label>9. Most important skills for entry-level workers:</label>
+    <input type="checkbox" name="skills[]" value="Basic healthcare knowledge"> Basic healthcare knowledge<br>
+    <input type="checkbox" name="skills[]" value="Data entry and record-keeping"> Data entry and record-keeping<br>
+    <input type="checkbox" name="skills[]" value="Patient communication"> Patient communication<br>
+    <input type="checkbox" name="skills[]" value="Patient care"> Patient care<br>
+    <input type="checkbox" name="skills[]" value="Administrative skills"> Administrative skills<br>
+    <input type="checkbox" name="skills[]" value="Electronic Health Record (EHR) usage"> Electronic Health Record (EHR) usage<br>
+
+    <label>10. Willing to hire workers with relevant training but no experience?</label>
+    <select name="willingToHire" required>
+        <option value="">Select...</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe (depends on the role)</option>
+    </select>
+
+    <h2>Section 4: Training and Development for Staff</h2>
+    <label>11. Provide training programs for existing staff?</label>
+    <select name="trainingPrograms" required>
+        <option value="">Select...</option>
+        <option>Yes, regularly</option>
+        <option>Yes, occasionally</option>
+        <option>No, but we would like to</option>
+        <option>No, not required</option>
+    </select>
+
+    <label>12. Training areas for non-healthcare staff:</label>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="Administrative skills"> Administrative skills<br>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="Customer service"> Customer service<br>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="Record-keeping"> Record-keeping<br>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="EHR software"> EHR software<br>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="Communication and teamwork"> Communication and teamwork<br>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="Compliance and safety"> Compliance and safety<br>
+    <input type="checkbox" name="trainingNonHealthcare[]" value="Other"> Other (please specify):<br>
+    <input type="text" name="otherTrainingNonHealthcare" placeholder="Please specify..." aria-label="Other training non-healthcare">
+
+    <label>13. Training areas for healthcare staff:</label>
+    <input type="checkbox" name="trainingHealthcare[]" value="Technical skills"> Technical skills<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="Medical equipment usage"> Medical equipment usage<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="EHR systems"> EHR systems<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="Compliance and safety"> Compliance and safety<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="Patient communication"> Patient communication<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="Leadership"> Leadership<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="Continuing Medical Education (CME)"> Continuing Medical Education (CME)<br>
+    <input type="checkbox" name="trainingHealthcare[]" value="Other"> Other (please specify):<br>
+    <input type="text" name="otherTrainingHealthcare" placeholder="Please specify..." aria-label="Other training healthcare">
+
+    <label>14. Interested in external training providers?</label>
+    <select name="externalTrainingProviders" required>
+        <option value="">Select...</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe (depends on cost and content)</option>
+    </select>
+
+    <h2>Section 5: Salary and Compensation</h2>
+    <label>15. Typical starting salary for entry-level positions:</label>
+    <select name="startingSalary" required>
+        <option value="">Select...</option>
+        <option>Less than 5,000 ETB</option>
+        <option>5,000-7,000 ETB</option>
+        <option>7,000-10,000 ETB</option>
+        <option>10,000-12,000 ETB</option>
+        <option>12,000-15,000 ETB</option>
+        <option>15,000-20,000 ETB</option>
+        <option>20,000-30,000 ETB</option>
+        <option>30,000-50,000 ETB</option>
+        <option>More than 50,000 ETB</option>
+    </select>
+
+    <label>16. Additional benefits offered:</label>
+    <input type="checkbox" name="benefits[]" value="Health insurance"> Health insurance<br>
+    <input type="checkbox" name="benefits[]" value="Paid time off"> Paid time off<br>
+    <input type="checkbox" name="benefits[]" value="Overtime pay"> Overtime pay<br>
+    <input type="checkbox" name="benefits[]" value="Training and professional development"> Training and professional development<br>
+    <input type="checkbox" name="benefits[]" value="Transportation allowance"> Transportation allowance<br>
+    <input type="checkbox" name="benefits[]" value="Housing allowance"> Housing allowance<br>
+    <input type="checkbox" name="benefits[]" value="Other"> Other (please specify):<br>
+    <input type="text" name="otherBenefits" placeholder="Please specify..." aria-label="Other benefits">
+
+    <h2>Section 6: Future Hiring Needs and Expectations</h2>
+    <label>17. Anticipated future demand for entry-level healthcare workers:</label>
+    <select name="futureDemand" required>
+        <option value="">Select...</option>
+        <option>Yes, significant increase</option>
+        <option>Yes, slight increase</option>
+        <option>No, stay the same</option>
+        <option>No, decrease</option>
+    </select>
+
+    <label for="futureHiringTitles">18. Future entry-level positions your facility expects to hire for (please specify job titles and approximate numbers):</label>
+    <textarea id="futureHiringTitles" name="futureHiringTitles" rows="4" aria-label="Future hiring titles"></textarea>
+
+    <label for="expectedSalaryRanges">19. Expected salary ranges for future entry-level positions (please specify ranges for different job titles):</label>
+    <textarea id="expectedSalaryRanges" name="expectedSalaryRanges" rows="4" aria-label="Expected salary ranges"></textarea>
+
+    <label>20. Will future positions require new or additional qualifications or skills compared to current roles?</label>
+    <select name="newQualifications" required>
+        <option value="">Select...</option>
+        <option>Yes (please specify)</option>
+        <option>No</option>
+        <option>Not sure</option>
+    </select>
+    <input type="text" name="additionalQualifications" placeholder="Please specify..." aria-label="Additional qualifications">
+
+    <label>21. Will you consider expanding job opportunities for non-clinical staff in the future?</label>
+    <select name="expandOpportunities" required>
+        <option value="">Select...</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+    </select>
+
+    <label for="prioritizeHiring">22. How would you prioritize hiring between healthcare and non-healthcare roles?</label>
+    <textarea id="prioritizeHiring" name="prioritizeHiring" rows="4" aria-label="Prioritize hiring"></textarea>
+
+    <h2>Section 7: Final Comments</h2>
+    <label for="additionalComments">23. Additional comments or suggestions:</label>
+    <textarea id="additionalComments" name="additionalComments" rows="4" aria-label="Additional comments"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
